@@ -10,7 +10,7 @@ def f(x): return 0.5 + (np.cos(np.sin(x ** 2 - A ** 2))**2 - 0.5) / (1 + 0.001 *
 x_min = -100
 x_max = 100
 dx = 0.01
-x = np.arange(x_min, x_max, dx)
+x = np.arange(x_min, x_max+0.01, dx)
 y = f(x)
 
 res = {
@@ -29,3 +29,4 @@ out.close()
 pylab.plot(x, y)
 pylab.grid()
 pylab.savefig("results/task1.png")
+pylab.show()
